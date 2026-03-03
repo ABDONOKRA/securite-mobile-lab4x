@@ -130,12 +130,10 @@ Maintenant on a TOUT ce qu'il faut ! Récapitulons :
 # TASK 6 - Comparaison JADX vs JD-GUI
 
 <img width="953" height="584" alt="image" src="https://github.com/user-attachments/assets/3b2407fe-e028-4114-9402-2e0464d682f5" />
-# Puisque nous n'avons pas d'interface graphique stable, on va documenter la comparaison théorique basée sur le tableau de prof ET sur notre analyse JADX !
+## Puisque nous n'avons pas d'interface graphique stable, on va documenter la comparaison théorique basée sur le tableau de prof ET sur notre analyse JADX !
 
-## TABLEAU DE COMPARAISON JADX vs JD-GUI
+# TABLEAU DE COMPARAISON JADX vs JD-GUI
 
-
-# ⚔️ Comparaison des Décompilateurs : JADX GUI vs JD-GUI
 
 | ASPECT | JADX GUI | JD-GUI |
 |--------|----------|--------|
