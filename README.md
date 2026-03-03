@@ -59,5 +59,23 @@ if (a.a(obj)) {  // ← Cette fonction vérifie le secret !
     str = "This is the correct secret.";
 }
 ```
+## Task 4 — Recherche de chaînes sensibles
+# Regardons le fichier crucial a.java
+
+<img width="953" height="814" alt="image" src="https://github.com/user-attachments/assets/243d7108-aee4-486e-b39e-b7e196c2a0d9" />
+
+  <img width="953" height="814" alt="image" src="https://github.com/user-attachments/assets/e40b3fd9-46a7-4472-b4bc-80fe370e779c" />
 
 
+  <img width="960" height="324" alt="image" src="https://github.com/user-attachments/assets/e5cb95ba-875b-4952-8a47-d2a730056df6" />
+
+
+  #  Comment fonctionne le SECRET :
+
+Dans `a.java`, regardez cette ligne **CRUCIALE** :
+
+```java
+bArr = sg.vantagepoint.a.a.a(
+    b("8d127684cbc37c17616d806cf50473cc"),  // ← Clé AES en HEX
+    Base64.decode("5UJiFctbmgbDoLXmpL12mkno8HT4Lv8dlat8FxR2GOc=", 0)  // ← Secret chiffré en Base64
+);
