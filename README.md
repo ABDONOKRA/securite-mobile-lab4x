@@ -145,3 +145,20 @@ Maintenant on a TOUT ce qu'il faut ! Récapitulons :
 | **Vitesse** | Plus lent sur gros APK | Plus rapide en général |
 | **Analyse DEX** | Décompile directement les fichiers DEX | Nécessite conversion DEX→JAR via dex2jar |
 | **AndroidManifest** | Affiche le manifeste décodé automatiquement | Non accessible (besoin d'APKTool séparé) |
+
+
+
+  
+---
+
+##  Résumé des Tasks Complétées :
+
+- ✅ **TASK 1** - Workspace préparé, APK vérifié (SHA-256)
+- ✅ **TASK 3** - Décompilation JADX, analyse du manifeste
+- ✅ **TASK 4** - Secret cracké via déchiffrement AES
+- ✅ **TASK 5** - Conversion DEX→JAR réussie (dex2jar)
+- ✅ **TASK 6** - Comparaison JADX vs JD-GUI complète
+
+---
+
+ **Objectif du lab atteint : Le secret a été découvert et toutes les techniques d'analyse ont été maîtrisées **
