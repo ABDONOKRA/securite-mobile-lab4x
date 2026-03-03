@@ -94,7 +94,7 @@ cat decompiled_app/sources/sg/vantagepoint/a/a.java
 
 <img width="961" height="433" alt="image" src="https://github.com/user-attachments/assets/57b672e6-7802-49d0-bf06-d225f178c702" />
 
-#  ANALYSE du code de déchiffrement :
+###  ANALYSE du code de déchiffrement :
 
 ```java
 public static byte[] a(byte[] bArr, byte[] bArr2) {
@@ -111,3 +111,39 @@ Maintenant on a TOUT ce qu'il faut ! Récapitulons :
 2. **Secret chiffré (base64)** : `5UJiFctbmgbDoLXmpL12mkn0sHT4Lv8dLat8FxR2G0c=`
 
 3. **Algorithme** : AES/ECB/PKCS7Padding
+
+#  LE SECRET EST : I want to believe
+
+<img width="1174" height="893" alt="image" src="https://github.com/user-attachments/assets/f5345990-a9b7-458c-a9d3-42a65b93472b" />
+
+### TASK 5 - Convertir DEX → JAR avec dex2jar
+
+<img width="965" height="581" alt="image" src="https://github.com/user-attachments/assets/a6913b46-8a3c-4b17-bdf3-5c76030a208e" />
+# TASK 5 - COMPLÉTÉE !
+
+## Résultats :
+
+- ✅ Fichier `classes.dex` extrait (5528 bytes)
+- ✅ Conversion réussie : `UnCrackable-Level1.jar` (5.4K)
+- ✅ Format vérifié : Archive ZIP valide
+
+# TASK 6 - Comparaison JADX vs JD-GUI
+
+<img width="953" height="584" alt="image" src="https://github.com/user-attachments/assets/3b2407fe-e028-4114-9402-2e0464d682f5" />
+# Puisque nous n'avons pas d'interface graphique stable, on va documenter la comparaison théorique basée sur le tableau de prof ET sur notre analyse JADX !
+
+## TABLEAU DE COMPARAISON JADX vs JD-GUI
+
+
+# ⚔️ Comparaison des Décompilateurs : JADX GUI vs JD-GUI
+
+| ASPECT | JADX GUI | JD-GUI |
+|--------|----------|--------|
+| **Navigation** | Affiche la structure Android complète (AndroidManifest, ressources, code) | Affiche uniquement la structure Java (packages, classes) |
+| **Kotlin** | Meilleure gestion du code Kotlin | Difficulté avec le code Kotlin (syntaxe parfois illisible) |
+| **Obfuscation** | Tente de reconstruire les noms de variables | Conserve souvent les noms obfusqués |
+| **Ressources** | Accès direct aux ressources (XML, assets, etc.) | Pas d'accès aux ressources Android |
+| **Annotations** | Meilleure préservation des annotations Android | Peut perdre certaines annotations spécifiques |
+| **Vitesse** | Plus lent sur gros APK | Plus rapide en général |
+| **Analyse DEX** | Décompile directement les fichiers DEX | Nécessite conversion DEX→JAR via dex2jar |
+| **AndroidManifest** | Affiche le manifeste décodé automatiquement | Non accessible (besoin d'APKTool séparé) |
