@@ -79,3 +79,35 @@ bArr = sg.vantagepoint.a.a.a(
     b("8d127684cbc37c17616d806cf50473cc"),  // ← Clé AES en HEX
     Base64.decode("5UJiFctbmgbDoLXmpL12mkno8HT4Lv8dlat8FxR2GOc=", 0)  // ← Secret chiffré en Base64
 );
+
+```
+
+#  MÉTHODE DE CRACKING - 3 APPROCHES :
+
+## Approche 1 : Déchiffrer le secret (RECOMMANDÉ)
+
+On va regarder la fonction de déchiffrement AES :
+
+```bash
+cat decompiled_app/sources/sg/vantagepoint/a/a.java
+```
+
+<img width="961" height="433" alt="image" src="https://github.com/user-attachments/assets/57b672e6-7802-49d0-bf06-d225f178c702" />
+
+#  ANALYSE du code de déchiffrement :
+
+```java
+public static byte[] a(byte[] bArr, byte[] bArr2) {
+    SecretKeySpec secretKeySpec = new SecretKeySpec(bArr, "AES/ECB/PKCS7Padding");
+    Cipher cipher = Cipher.getInstance("AES");
+    cipher.init(2, secretKeySpec);  // Mode 2 = DECRYPT
+    return cipher.doFinal(bArr2);
+}
+```
+Maintenant on a TOUT ce qu'il faut ! Récapitulons :
+
+1. **Clé AES (hex)** : `8d127684cbc37c17616d806cf50473cc`
+
+2. **Secret chiffré (base64)** : `5UJiFctbmgbDoLXmpL12mkn0sHT4Lv8dLat8FxR2G0c=`
+
+3. **Algorithme** : AES/ECB/PKCS7Padding
