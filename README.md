@@ -39,19 +39,19 @@ resources/ → AndroidManifest.xml, strings, etc.
 <img width="1152" height="904" alt="image" src="https://github.com/user-attachments/assets/735cf7d5-13dd-45a1-bcfc-cf8f511af7de" />
  ANALYSE CRITIQUE du MainActivity.java
 
-## 🚨 Protections détectées :
+##  Protections détectées :
 
 | Protection | Méthode | Comportement |
 |------------|---------|--------------|
 | **Root Detection** | `c.a()`, `c.b()`, `c.c()` | Vérifient si le téléphone est rooté |
 | **Debugger Detection** | `b.a()` | Vérifie si l'app est débuggable |
 
-### ⚠️ Conséquence :
+###  Conséquence :
 Si détecté → Message **"Root detected!"** ou **"App is debuggable!"** puis `System.exit(0)` (fermeture forcée)
 
 ---
 
-## 🔑 LE SECRET EST ICI :
+##  LE SECRET EST ICI :
 
 ```java
 if (a.a(obj)) {  // ← Cette fonction vérifie le secret !
