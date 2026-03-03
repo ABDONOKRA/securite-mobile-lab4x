@@ -32,3 +32,31 @@ resources/ → AndroidManifest.xml, strings, etc.
 | **Composants exportés** | Aucun explicite | ✅ |
 | **Debuggable** | NON | ✅ (pas de android:debuggable="true") |
 | **AllowBackup** | OUI | ⚠️ Risque de sécurité ! |
+
+
+### Explorer le CODE SOURCE décompilé
+
+<img width="1152" height="904" alt="image" src="https://github.com/user-attachments/assets/735cf7d5-13dd-45a1-bcfc-cf8f511af7de" />
+ ANALYSE CRITIQUE du MainActivity.java
+
+## 🚨 Protections détectées :
+
+| Protection | Méthode | Comportement |
+|------------|---------|--------------|
+| **Root Detection** | `c.a()`, `c.b()`, `c.c()` | Vérifient si le téléphone est rooté |
+| **Debugger Detection** | `b.a()` | Vérifie si l'app est débuggable |
+
+### ⚠️ Conséquence :
+Si détecté → Message **"Root detected!"** ou **"App is debuggable!"** puis `System.exit(0)` (fermeture forcée)
+
+---
+
+## 🔑 LE SECRET EST ICI :
+
+```java
+if (a.a(obj)) {  // ← Cette fonction vérifie le secret !
+    create.setTitle("Success!");
+    str = "This is the correct secret.";
+}
+
+
